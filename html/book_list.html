@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width" name="viewport" />
+    <meta content="telephone=no" name="format-detection" />
+    <title>图书馆管理系统-书籍</title>
+    <link href="./files/css.css" rel="stylesheet">
+    <script src="./files/jquery.js"></script>
+    <script src="./files/bootstrap.min.js"></script>
+    <style>
+        .footer {
+            text-align: center;
+            color: grey;
+        } */
+        .list-group{
+            position: absolute;bottom:0;
+        }
+        
+
+    </style>
+
+</head>
+
+<body>
+    <div></div>
+        <!--图书馆管理系统页面-->
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">图书馆管理系统</a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">书籍 <span class="sr-only">(current)</span></a></li>
+                    <li><a href="./author.html">作者</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                            aria-expanded="false">更多 <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">社区</a></li> <!-- 功能未开发 -->
+                            <li><a href="#">聊天室</a></li>
+                            <li><a href="#">娱乐中心</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">轻松一刻</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">商务合作</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="navbar-form navbar-left">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="输入书籍名称或ISBN">
+                    </div>
+                    <button type="submit" class="btn btn-default">检索</button>
+                </form>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">Admin</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                            aria-expanded="false">更多操作 <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">修改用户头像</a></li>
+                            <li><a href="#">修改用户密码</a></li>
+                            <li><a href="#">修改个人信息</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="./index.html">注销</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2">
+                <div class="list-group">
+                    <a href="./book_list.html" class="list-group-item active">
+                        图书列表
+                    </a>
+                    <a href="./author.html" class="list-group-item">作者列表</a>
+                    <a href="./press.html" class="list-group-item">出版社列表</a>
+                    <a href="./more.html" class="list-group-item">更多操作</a>
+
+                </div>
+            </div>
+            <div class="col-md-10">
+                <div class="panel panel-primary">
+                    <div class="panel-heading clearfix">
+                        <h3 class="panel-title">图书馆管理系统</h3>
+                    </div>
+                    <div class="panel-body">
+                        <a href="#" class="btn btn-success">新增</a>
+                        <form class="form-inline pull-right">
+                            <div class="form-group">
+
+                                <div class="input-group">
+
+                                    <input type="text" class="form-control" id="exampleInputAmount" placeholder="关键字">
+
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary">搜索</button>
+                        </form>
+                        <table class="table table-hover table-striped table-bordered" style="margin-top: 10px">
+                            <thead>
+                                <tr>
+                                    <th>书架编号</th>
+                                    <th>书名</th>
+                                    <th>作者</th>
+                                    <th>出版社</th>
+                                    <th>价格</th>
+                                    <th>ISBN</th>
+                                    <th class="text-center">操作</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>《平凡的世界》</td>
+                                    <td>路遥</td>
+                                    <td>北京十月文艺出版社</td>
+                                    <td>￥74.50</td>
+                                    <td>9787530216781</td>
+                                    <td class="text-center">
+                                        <a class="btn btn-primary btn-sm">编辑</a>
+                                        <a class="btn btn-danger btn-sm">删除</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>《新型冠状病毒肺炎防护知识读本校园版》</td>
+                                    <td>金发光</td>
+                                    <td>陕西人民教育出版社</td>
+                                    <td>￥4.8</td>
+                                    <td>9787530216782</td>
+                                    <td class="text-center">
+                                        <a class="btn btn-primary btn-sm">编辑</a>
+                                        <a class="btn btn-danger btn-sm">删除</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>《人间失格》</td>
+                                    <td>(日)太宰治</td>
+                                    <td>作家出版社</td>
+                                    <td>￥21.30</td>
+                                    <td>9787530216784</td>
+                                    <td class="text-center">
+                                        <a class="btn btn-primary btn-sm">编辑</a>
+                                        <a class="btn btn-danger btn-sm">删除</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>《人生海海》</td>
+                                    <td>麦家 </td>
+                                    <td>北京十月文艺出版社</td>
+                                    <td>￥27.50</td>
+                                    <td>9787530296781</td>
+                                    <td class="text-center">
+                                        <a class="btn btn-primary btn-sm">编辑</a>
+                                        <a class="btn btn-danger btn-sm">删除</a>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                        <nav aria-label="Page navigation">
+                            <ul class="pagination pull-right">
+                                <li>
+                                    <a href="#" aria-label="Previous">
+                                        <span aria-hidden="true">&laquo;</span>
+                                    </a>
+                                </li>
+                                <li><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
+                                <li>
+                                    <a href="#" aria-label="Next">
+                                        <span aria-hidden="true">&raquo;</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                联系电话：123456789 地址：潍坊市xxxxxx
+                
+
+
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

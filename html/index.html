@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width" name="viewport" />
+<meta content="telephone=no" name="format-detection" />
+	<title>图书管理系统</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="Copyright" content="zfsoft">
+	<link rel="stylesheet" type="text/css" href="./files/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="./files/zftal-ui.css">
+	<link rel="stylesheet" type="text/css" href="./files/chosen-min.css">
+	<meta http-equiv="Content-Security-Policy" content="script-src &#39;self&#39; &#39;unsafe-inline&#39;">
+	<meta name="renderer" content="webkit">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+	<style type="text/css">
+		.btn-lang {
+			width: 76px;
+			border-color: #357ebd;
+			font-weight: bold;
+			height: 30px;
+		}
+
+		.btn-lang-enabled {
+			background-color: #428bca;
+			color: #fff;
+		}
+
+		.btn-lang-disabled {
+			background-color: #fff;
+			color: #333;
+		}
+
+		.btn-lang-enabled:hover,
+		.btn-lang-enabled:focus {
+			color: #fff;
+		}
+
+		.btn-group>.btn-lang:last-child {
+			border-top-right-radius: 3px;
+			border-bottom-right-radius: 3px;
+		}
+
+		.slideShow {
+			position: relative;
+			overflow: hidden;
+		}
+
+		.slideShow ul {
+			list-style: none;
+			margin: 0px;
+			padding: 0px;
+			width: 1000px;
+			position: relative;
+		}
+
+		.slideShow ul li {
+			margin: 0px;
+			padding: 0px;
+			float: left;
+		}
+
+		.slideShow .showNav {
+			position: absolute;
+			right: 10px;
+			bottom: 5px;
+			text-align: center;
+			font-size: 12px;
+			line-height: 20px;
+		}
+
+		.slideShow .showNav span {
+			cursor: pointer;
+			display: block;
+			float: left;
+			width: 20px;
+			height: 20px;
+			background: #ff5a28;
+			margin-left: 2px;
+			color: #fff;
+		}
+
+		.slideShow .showNav .active {
+			background: #b63e1a;
+		}
+
+		.tablogin {
+			margin-bottom: 15px;
+		}
+
+		.sl_log_rt .tablogin li h5 {
+			margin: 0;
+			line-height: 18px;
+		}
+
+		.nav-tabs {
+			border: none;
+		}
+
+		.tipsqrcode {
+			line-height: 20px
+		}
+
+		.captcha_wrapper {
+			padding: 0 15px;
+			height: 245px;
+		}
+
+		.zfdun_container {
+			height: 245px;
+		}
+
+		.zfdun {
+			height: 245px;
+		}
+
+		html,
+		body {
+			width: 100%;
+			overflow-x: hidden;
+		}
+	</style>
+
+<body style="background:#fafafa;" class="vsc-initialized">
+	<div class="container container_1170">
+		<div class="row sl_log_top">
+			<div class="col-sm-8 logo_1"><img src="./files/logo_jw_d.png" style="margin-top:-3px">
+				<span id="xtmc">图书馆管理系统</span>
+			</div>
+		</div>
+		<div class="row sl_log_bor4">
+			<div class="col-sm-8 hidden-xs sl_log_lf slideShow">
+				<img class="img-responsive"
+					src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1607679708827&di=a3582760cf4ec3b287aa7d313624c85e&imgtype=0&src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fimages%2F20181127%2F39b86192bf3f43b495636b4b89021f7d.jpeg">
+			</div>
+			<div class="col-sm-4 sl_log_rt">
+				<form class="form-horizontal" role="form"
+					>
+					<input type="hidden" id="csrftoken" name="csrftoken" value="#">
+					<input type="hidden" id="language" name="language" value="zh_CN">
+					<div>
+						<div class="tab-content">
+							<div id="home" class="tab-pane in active">
+								<h5>用户登录</h5>
+								<input type="text" style="display: none;" autocomplete="off">
+								<input type="password" style="display: none;" autocomplete="off">
+
+
+
+								<p style="display: none;" id="tips" class="bg_danger sl_danger">
+								</p>
+
+								<div class="form-group">
+									<div class="input-group">
+										<div class="input-group-addon"><img src="./files/log_ic01.png" width="16"
+												height="16">
+										</div>
+										<input type="text" class="form-control" name="yhm" id="yhm" value=""
+											placeholder="用户名" onblur="" autocomplete="off">
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="input-group">
+										<div class="input-group-addon"><img src="./files/log_ic02.png" width="16"
+												height="16">
+										</div>
+										<input type="password" name="mm" id="hidMm" style="display:none">
+										<input type="password" class="form-control" placeholder="密码">
+										<input type="password" style="display:none;">
+									</div>
+								</div>
+								<div class="form-group">
+									<a href="./book_list.html"><button type="button" class="btn btn-primary btn-block"
+											id="dl">登 录</button></a>
+								</div>
+								<div class="form-group" style="height: 22px;">
+								</div>
+								<div class="form-group">
+									<div class="sl_log_ewm hidden-xs"><img src="./files/login_ewm.png" width="90"
+											height="90">&nbsp;&nbsp;<span>用手机扫一扫,<br>安全、便捷登录</span></div>
+
+								</div>
+
+							</div>
+						</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div id="footerID" class="footer">
+		联系电话：123456789 地址：潍坊市xxxxxx
+	</div>
+</body>
+
+</html>
